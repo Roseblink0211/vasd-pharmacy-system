@@ -6,3 +6,25 @@ __pycache__/
 .vscode/
 .idea/
 test_token.txt
+# Database backup
+*.backup
+backup_*.sql
+before_cleanup_*.backup
+
+# Temporary inspection / patch scripts
+inspect_*.py
+patch_*.py
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment
+.env
+venv/
+.venv/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/

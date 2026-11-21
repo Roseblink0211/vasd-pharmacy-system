@@ -1,0 +1,593 @@
+/* =========================================================
+   VASD PHARMACY - GLOBAL STYLES
+   File: src/index.css
+========================================================= */
+
+/* =========================
+   RESET
+========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 0;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: #f5f7fa;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+
+  color: #111827;
+  background: #f5f7fa;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =========================
+   ROOT / ANT LAYOUT
+========================= */
+
+#root {
+  min-height: 100vh;
+}
+
+.ant-layout {
+  min-width: 0;
+}
+
+.ant-layout-content {
+  min-width: 0;
+}
+
+.ant-typography {
+  word-break: break-word;
+}
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.ant-layout-sider {
+  background: #001529 !important;
+}
+
+/* =========================
+   SIDEBAR CHILDREN
+========================= */
+
+.ant-layout-sider-children {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+/* =========================
+   BRAND
+========================= */
+
+.sidebar-brand {
+  flex: 0 0 auto;
+
+  min-height: 82px;
+  padding: 16px 18px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  background: #001529;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-brand-icon {
+  width: 48px;
+  height: 48px;
+
+  flex: 0 0 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  color: #ffffff;
+  background: #1677ff;
+
+  font-size: 24px;
+  line-height: 1;
+}
+
+.sidebar-brand-title {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  letter-spacing: 0.2px;
+}
+
+.sidebar-brand-subtitle {
+  margin-top: 2px;
+
+  color: #94a3b8;
+
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+/* =========================
+   SIDEBAR MENU
+========================= */
+
+.ant-layout-sider .ant-menu {
+  flex: 1 1 auto;
+  min-height: 0;
+
+  padding: 8px 0 12px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  background: #001529 !important;
+
+  scrollbar-width: thin;
+  scrollbar-color: #64748b transparent;
+}
+
+.ant-layout-sider .ant-menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ant-layout-sider .ant-menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.ant-layout-sider .ant-menu::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: #475569;
+}
+
+.ant-layout-sider .ant-menu-item,
+.ant-layout-sider .ant-menu-submenu-title {
+  min-height: 44px;
+  height: auto;
+
+  margin-inline: 6px;
+  width: calc(100% - 12px);
+
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+
+  display: flex;
+  align-items: center;
+
+  border-radius: 8px;
+
+  line-height: 1.35 !important;
+}
+
+.ant-layout-sider .ant-menu-item-selected {
+  background: #1677ff !important;
+}
+
+.ant-layout-sider .ant-menu-item-selected,
+.ant-layout-sider .ant-menu-item-selected .anticon {
+  color: #ffffff !important;
+}
+
+.ant-layout-sider .ant-menu-item:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.ant-layout-sider .ant-menu-item-group-title {
+  padding: 18px 16px 8px !important;
+
+  color: #6f8db0 !important;
+
+  font-size: 11px !important;
+  font-weight: 700;
+  line-height: 1.3 !important;
+
+  letter-spacing: 0.8px;
+}
+
+/* =========================================================
+   SIDEBAR USER AREA
+========================================================= */
+
+.sidebar-user {
+  flex: 0 0 auto;
+
+  width: 100%;
+  padding: 14px 14px 16px;
+
+  background: #001529;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  position: relative;
+  z-index: 5;
+}
+
+.sidebar-user .ant-space {
+  width: 100%;
+}
+
+.sidebar-user .ant-space-item:last-child {
+  min-width: 0;
+  flex: 1;
+}
+
+.sidebar-user-name {
+  max-width: 165px;
+
+  overflow: hidden;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.35;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sidebar-user .ant-avatar {
+  flex: 0 0 auto;
+
+  background: #0f2741;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.sidebar-user .ant-btn {
+  min-height: 38px;
+  height: auto;
+
+  padding: 8px 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  border-radius: 8px;
+
+  line-height: 1.3;
+
+  white-space: normal;
+
+  text-align: left;
+}
+
+.sidebar-user .ant-btn:not(.ant-btn-dangerous):hover {
+  color: #69b1ff !important;
+  background: rgba(22, 119, 255, 0.12) !important;
+}
+
+.sidebar-user .ant-btn-dangerous:hover {
+  background: rgba(255, 77, 79, 0.1) !important;
+}
+
+/* =========================================================
+   MAIN HEADER
+========================================================= */
+
+.main-header {
+  height: 78px !important;
+  min-height: 78px !important;
+
+  padding: 0 32px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+
+  gap: 20px;
+
+  line-height: normal !important;
+
+  background: #ffffff !important;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  position: sticky;
+  top: 0;
+
+  z-index: 100;
+
+  overflow: visible;
+}
+
+.main-header > div:first-child {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-header h1,
+.main-header h2,
+.main-header h3,
+.main-header h4,
+.main-header h5 {
+  margin-top: 0 !important;
+  margin-bottom: 2px !important;
+
+  line-height: 1.3 !important;
+
+  color: #111827;
+}
+
+.main-header .ant-typography {
+  line-height: 1.4 !important;
+}
+
+.main-header > .ant-space {
+  flex: 0 0 auto;
+}
+
+.main-header > .ant-space .ant-typography {
+  margin: 0 !important;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   PAGE CONTENT
+========================================================= */
+
+.ant-layout-content {
+  background: #f5f7fa;
+}
+
+.ant-layout-content > div {
+  min-width: 0;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.ant-card {
+  border-color: #edf0f3;
+  border-radius: 10px;
+}
+
+.ant-card-head {
+  min-height: 56px;
+}
+
+.ant-card-head-title {
+  white-space: normal;
+}
+
+/* =========================
+   STATISTIC
+========================= */
+
+.ant-statistic-title {
+  margin-bottom: 6px !important;
+
+  color: #7b8494 !important;
+}
+
+.ant-statistic-content {
+  color: #111827;
+}
+
+.ant-statistic-content-value {
+  font-weight: 500;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.ant-table-wrapper {
+  width: 100%;
+  min-width: 0;
+}
+
+.ant-table {
+  border-radius: 8px;
+}
+
+.ant-table-thead > tr > th {
+  color: #111827;
+
+  background: #fafafa !important;
+
+  font-weight: 600;
+}
+
+.ant-table-cell {
+  vertical-align: middle;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.ant-form-item-label > label {
+  font-weight: 500;
+}
+
+.ant-input,
+.ant-input-number,
+.ant-select-selector,
+.ant-input-affix-wrapper {
+  border-radius: 6px !important;
+}
+
+.ant-input-number {
+  width: 100%;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.ant-btn {
+  border-radius: 6px;
+}
+
+/* =========================
+   ALERT
+========================= */
+
+.ant-alert {
+  border-radius: 8px;
+}
+
+/* =========================
+   DRAWER
+========================= */
+
+.ant-drawer-header {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.ant-drawer-title {
+  font-weight: 600;
+}
+
+/* =========================
+   TAG
+========================= */
+
+.ant-tag {
+  border-radius: 5px;
+}
+
+/* =========================================================
+   GLOBAL SCROLLBAR
+========================================================= */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+
+  background: #cbd5e1;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+  .main-header {
+    padding-inline: 24px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .main-header {
+    height: auto !important;
+    min-height: 72px !important;
+
+    padding: 14px 20px !important;
+
+    align-items: flex-start !important;
+
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+  .main-header > .ant-space {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   UTILITIES
+========================================================= */
+
+.text-ellipsis {
+  min-width: 0;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.page-title {
+  margin-bottom: 4px !important;
+}
+
+.page-subtitle {
+  color: #7b8494;
+}
